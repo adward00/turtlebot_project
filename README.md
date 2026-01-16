@@ -2,7 +2,7 @@
 
 1. DWB알고리즘 연구 및 구현 실패
 
-2. yolov8을 이용해 칠성사이다와 코카콜라를 인식해 물품 배치 잘못되었음을 알리는 기능 구현 (cocacola_yolov8폴더와 chilsung_yolov8폴더)
+2. yolov8을 이용해 칠성사이다와 코카콜라를 인식해 물품 배치 잘못되었음을 알리는 기능 구현 (cocacola_yolov8폴더와 chilsung_yolov8폴더) master branch에 업로드 해놓음
 
 3. Theta* 알고리즘 구현 (rpp_test.py)
 
