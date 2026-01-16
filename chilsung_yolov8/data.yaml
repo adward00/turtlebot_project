@@ -1,0 +1,15 @@
+path: .
+
+train: train/images
+val: valid/images
+test: test/images
+
+nc: 1
+names: ['chilsung']
+
+roboflow:
+  workspace: mg-iqf5q
+  project: sprite-p0hfa-enmle
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/mg-iqf5q/sprite-p0hfa-enmle/dataset/1

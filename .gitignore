@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environment (절대 Git에 올리면 안 됨)
+venv/
+
+# YOLO / ML 모델 파일
+*.pt
+*.pth
+*.onnx
+*.weights
+
+# Torch / OpenCV 캐시
+.cache/
+
+# OS
+.DS_Store
+Thumbs.db

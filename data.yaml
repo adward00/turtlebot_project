@@ -1,0 +1,15 @@
+path: .
+
+train: train/images
+val: valid/images
+test: test/images
+
+nc: 1
+names: ['cocacola']
+
+roboflow:
+  workspace: mg-iqf5q
+  project: cocacola-1muvc-wlpmc
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/mg-iqf5q/cocacola-1muvc-wlpmc/dataset/1
