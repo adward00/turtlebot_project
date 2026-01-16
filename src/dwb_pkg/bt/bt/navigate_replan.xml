@@ -1,0 +1,17 @@
+<root main_tree_to_execute="NavigateReplan">
+<BehaviorTree ID="NavigateReplan">
+
+
+<RecoveryNode number_of_retries="100">
+<PipelineSequence>
+<ComputePathToPose planner_id="HybridAStar"/>
+<FollowPath controller_id="DWB"/>
+</PipelineSequence>
+
+
+<ClearEntireCostmap/>
+</RecoveryNode>
+
+
+</BehaviorTree>
+</root>

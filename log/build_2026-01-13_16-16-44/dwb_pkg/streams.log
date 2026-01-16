@@ -1,0 +1,23 @@
+[0.415s] Invoking command in '/home/mg0220/launch/src/dwb_pkg': PYTHONPATH=/home/mg0220/launch/build/dwb_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mg0220/launch/install/dwb_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/dwb_pkg build --build-base /home/mg0220/launch/build/dwb_pkg/build install --record /home/mg0220/launch/build/dwb_pkg/install.log --single-version-externally-managed install_data
+[0.552s] running egg_info
+[0.553s] writing ../../build/dwb_pkg/dwb_pkg.egg-info/PKG-INFO
+[0.553s] writing dependency_links to ../../build/dwb_pkg/dwb_pkg.egg-info/dependency_links.txt
+[0.553s] writing entry points to ../../build/dwb_pkg/dwb_pkg.egg-info/entry_points.txt
+[0.553s] writing requirements to ../../build/dwb_pkg/dwb_pkg.egg-info/requires.txt
+[0.553s] writing top-level names to ../../build/dwb_pkg/dwb_pkg.egg-info/top_level.txt
+[0.554s] reading manifest file '../../build/dwb_pkg/dwb_pkg.egg-info/SOURCES.txt'
+[0.555s] writing manifest file '../../build/dwb_pkg/dwb_pkg.egg-info/SOURCES.txt'
+[0.555s] running build
+[0.555s] running build_py
+[0.555s] running install
+[0.555s] running install_lib
+[0.556s] running install_data
+[0.556s] copying launch/nav2.launch.py -> /home/mg0220/launch/install/dwb_pkg/share/dwb_pkg/launch
+[0.556s] running install_egg_info
+[0.557s] removing '/home/mg0220/launch/install/dwb_pkg/lib/python3.10/site-packages/dwb_pkg-0.0.0-py3.10.egg-info' (and everything under it)
+[0.557s] Copying ../../build/dwb_pkg/dwb_pkg.egg-info to /home/mg0220/launch/install/dwb_pkg/lib/python3.10/site-packages/dwb_pkg-0.0.0-py3.10.egg-info
+[0.558s] running install_scripts
+[0.569s] Installing obstacle script to /home/mg0220/launch/install/dwb_pkg/lib/dwb_pkg
+[0.569s] Installing pure script to /home/mg0220/launch/install/dwb_pkg/lib/dwb_pkg
+[0.570s] writing list of installed files to '/home/mg0220/launch/build/dwb_pkg/install.log'
+[0.584s] Invoked command in '/home/mg0220/launch/src/dwb_pkg' returned '0': PYTHONPATH=/home/mg0220/launch/build/dwb_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mg0220/launch/install/dwb_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/dwb_pkg build --build-base /home/mg0220/launch/build/dwb_pkg/build install --record /home/mg0220/launch/build/dwb_pkg/install.log --single-version-externally-managed install_data

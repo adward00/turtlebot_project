@@ -1,0 +1,166 @@
+# =============================
+# Map Server
+# =============================
+map_server:
+  ros__parameters:
+    use_sim_time: true
+    yaml_filename: "/home/mg0220/maze.yaml"
+    frame_id: map
+
+# =============================
+# AMCL
+# =============================
+amcl:
+  ros__parameters:
+    use_sim_time: true
+
+    global_frame_id: map
+    odom_frame_id: odom
+    base_frame_id: base_link
+    scan_topic: scan
+
+    min_particles: 500
+    max_particles: 2000
+
+    set_initial_pose: true
+    initial_pose:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      yaw: 0.0
+
+# =============================
+# Planner Server
+# =============================
+planner_server:
+  ros__parameters:
+    use_sim_time: true
+    expected_planner_frequency: 5.0
+
+    planner_plugins: ["GridBased"]
+    GridBased:
+      plugin: "nav2_navfn_planner/NavfnPlanner"
+      tolerance: 0.3
+      use_astar: true
+      allow_unknown: true
+
+# =============================
+# Controller Server (DWB)
+# =============================
+controller_server:
+  ros__parameters:
+    use_sim_time: true
+
+    controller_frequency: 10.0
+    min_x_velocity_threshold: 0.001
+
+    controller_plugins: ["FollowPath"]
+    FollowPath:
+      plugin: "dwb_core::DWBLocalPlanner"
+
+      max_vel_x: 0.26
+      min_vel_x: 0.0
+      max_vel_theta: 1.0
+      min_speed_xy: 0.0
+
+      acc_lim_x: 2.5
+      acc_lim_theta: 3.2
+
+      sim_time: 1.7
+      vx_samples: 20
+      vtheta_samples: 40
+
+      critics:
+        - PathAlign
+        - GoalAlign
+        - PathDist
+        - GoalDist
+        - ObstacleFootprint
+
+# =============================
+# Global Costmap
+# =============================
+global_costmap:
+  global_costmap:
+    ros__parameters:
+      use_sim_time: true
+
+      global_frame: map
+      robot_base_frame: base_link
+      resolution: 0.05
+      track_unknown_space: true
+
+      plugins: ["static_layer", "obstacle_layer", "inflation_layer"]
+
+      static_layer:
+        plugin: "nav2_costmap_2d::StaticLayer"
+
+      obstacle_layer:
+        plugin: "nav2_costmap_2d::ObstacleLayer"
+        observation_sources: scan
+        scan:
+          topic: scan
+          max_obstacle_height: 2.0
+          clearing: true
+          marking: true
+
+      inflation_layer:
+        plugin: "nav2_costmap_2d::InflationLayer"
+        inflation_radius: 0.35
+        cost_scaling_factor: 3.0
+
+# =============================
+# Local Costmap
+# =============================
+local_costmap:
+  local_costmap:
+    ros__parameters:
+      use_sim_time: true
+
+      global_frame: odom
+      robot_base_frame: base_link
+      rolling_window: true
+      width: 3.0
+      height: 3.0
+      resolution: 0.05
+
+      plugins: ["obstacle_layer", "inflation_layer"]
+
+      obstacle_layer:
+        plugin: "nav2_costmap_2d::ObstacleLayer"
+        observation_sources: scan
+        scan:
+          topic: scan
+          clearing: true
+          marking: true
+
+      inflation_layer:
+        plugin: "nav2_costmap_2d::InflationLayer"
+        inflation_radius: 0.35
+        cost_scaling_factor: 3.0
+
+# =============================
+# BT Navigator
+# =============================
+bt_navigator:
+  ros__parameters:
+    use_sim_time: true
+    default_bt_xml_filename: "navigate_w_replanning_and_recovery.xml"
+
+# =============================
+# Lifecycle Managers
+# =============================
+lifecycle_manager_localization:
+  ros__parameters:
+    use_sim_time: true
+    autostart: true
+    node_names: ["map_server", "amcl"]
+
+lifecycle_manager_navigation:
+  ros__parameters:
+    use_sim_time: true
+    autostart: true
+    node_names:
+      - planner_server
+      - controller_server
+      - bt_navigator
