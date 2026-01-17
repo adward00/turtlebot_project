@@ -1,5 +1,0 @@
-[console_scripts]
-obstacle = dwb_pkg.obstacle:main
-pure = dwb_pkg.pure:main
-rpp_obstacle = dwb_pkg.rpp_obstacle:main
-
