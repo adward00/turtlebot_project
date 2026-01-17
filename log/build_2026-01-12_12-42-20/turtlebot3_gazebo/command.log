@@ -1,4 +1,0 @@
-Invoking command in '/home/mg0220/launch/build/turtlebot3_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mg0220/launch/install/dwb_pkg:/opt/ros/humble /usr/bin/cmake --build /home/mg0220/launch/build/turtlebot3_gazebo -- -j20 -l20
-Invoked command in '/home/mg0220/launch/build/turtlebot3_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mg0220/launch/install/dwb_pkg:/opt/ros/humble /usr/bin/cmake --build /home/mg0220/launch/build/turtlebot3_gazebo -- -j20 -l20
-Invoking command in '/home/mg0220/launch/build/turtlebot3_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mg0220/launch/install/dwb_pkg:/opt/ros/humble /usr/bin/cmake --install /home/mg0220/launch/build/turtlebot3_gazebo
-Invoked command in '/home/mg0220/launch/build/turtlebot3_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mg0220/launch/install/dwb_pkg:/opt/ros/humble /usr/bin/cmake --install /home/mg0220/launch/build/turtlebot3_gazebo
